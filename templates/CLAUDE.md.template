@@ -1,0 +1,93 @@
+# PROJECT CONSTITUTION — {PROJECT NAME}
+<!-- Amend only by explicit CONST: commits. This file outranks anything said in-session. -->
+
+## Purpose (FL400)
+{One paragraph. Why the business exists. The tiebreaker for all downstream disagreements.}
+
+## Standing Constraints (FL300 values — binding)
+- {e.g. All secrets from the vault. Never hardcoded, never .env.}
+- {e.g. No component of this software requires elevation to install or run.}
+- {e.g. Document numbers are immutable once issued.}
+- {e.g. Every state change to a business document is audit-logged, append-only.}
+- Every external dependency (vendor API, platform, AI service) is wrapped in
+  one owned reception-desk module. Direct vendor calls anywhere else fail CP3.
+- All stored-data access goes through the owning module's data counter.
+- Abstractions beyond these require a named FL200 callout for the second use
+  case, surfaced at CONFIRM BEFORE BUILDING.
+
+## Domain Vocabulary
+| Term | Means | Never confuse with |
+|------|-------|-------------------|
+| {term} | {definition in one line} | {common wrong reading} |
+
+## Architecture Facts
+- **Stack:** {languages, frameworks, hosting}
+- **Module map & data ownership:**
+
+| Module | Owns (data) | Reads only | Shared identifiers |
+|--------|------------|-----------|-------------------|
+| {module} | {tables/blobs} | {tables} | {ID scheme} |
+
+- **Identifier scheme:** {e.g. Crockford Base32, 5 chars, prefix per doc type}
+- **Naming conventions:** {files, branches, commits}
+
+## Operator Engagement Level (doc 12)
+**Level: {AUTOPILOT | FLIGHT DIRECTOR | HAND-FLYING}**{, scoped: e.g. hand-flying for architecture, autopilot for implementation}
+<!-- Changes only by CONST: amendment. Guardrails are level-invariant:
+     gates, halts, CONFIRM, ledger, and flight log apply at every level. -->
+
+## Process Rules (binding on every session)
+1. You operate inside ONE worktree. Never read or write outside it.
+2. Read this constitution at session start. If instructions conflict with it, say so and stop.
+3. Any data-shape change — schema, stored file format, identifier format,
+   retained document template — must be SURFACED, not implemented. Proposing
+   one triggers the schema-halt protocol.
+4. Any decision that resembles a business rule you were not given is above
+   your altitude. Surface it and stop.
+5. Every handoff ends in CONFIRM BEFORE BUILDING. Do not write code before
+   the operator confirms your restatement.
+6. At completion, produce a change summary: files touched, behavior changed,
+   assumptions made, anything you noticed but did not do.
+7. The operator governs. Honor the Engagement Level above: at AUTOPILOT,
+   never show diffs or ask code/architecture questions — decide the boring
+   conventional option, record it, move on; at FLIGHT DIRECTOR, decide but
+   show working on request; at HAND-FLYING, engage at full technical depth.
+   At EVERY level: business questions are asked in business terms, one at
+   a time, and genuine technical decisions reaching the operator arrive as
+   a Decision Brief (options, cost, effort, business pros/cons, door,
+   recommendation — doc 12). (Doc 12.)
+8. Change summaries are written in behavior terms. Technical detail goes in
+   a clearly separated appendix the operator may ignore.
+9. Quality is mechanical: run the committed analyzer/lint/test gate at CP3.
+   Findings are fixed or escalated as blockers — never surfaced as questions.
+   Gate commands: {analyzer/lint/test commands for this stack}
+10. Hard-path conditions — scaling doubt, schema pressure, migration, debt
+    come due — are NAMED and ROUTED (doc 12), never solved ad hoc in-session.
+11. Cost is surfaced continuously (doc 13). Read the cost ledger at session
+    start. Any new service, SKU, API dependency, or usage-pattern change
+    that moves a cost is announced in the change summary in plain dollars,
+    with cliff distance, and the ledger row is updated. Runaway-capable
+    costs (metered AI, per-message, per-call) get a written per-run budget
+    and a provider-side cap BEFORE first use. Never propose a paid
+    dependency without its price and its ledger row.
+12. Before any first-time action (an adoption, a new doc, a new config,
+    treating the repo as untouched), `git fetch` and diff against
+    `origin/<default-branch>` before assuming nothing exists yet — a
+    second unseen session is a real, recurring collision, not a
+    hypothetical.
+13. Any ranking, recommendation, or severity claim asked of the operator
+    carries an evidence grade — OBSERVED (ran it / read the consumers),
+    INFERRED (structure/naming only), or REPORTED (from a doc/comment) —
+    never left blank. An operator's own flat factual assertion about the
+    codebase gets the same check, symmetrically, before anything is built
+    on top of it (doc 12).
+
+## Environment Facts
+- **Build:** {command}
+- **Test:** {command}
+- **Run locally:** {command}
+- **Do not touch:** {paths, configs, credentials locations}
+
+## Amendment Log
+<!-- Newest first. Mirror of CONST: commit messages. -->
+- {date} — {amendment}
