@@ -3,9 +3,10 @@
 
 - [x] LICENSE copyright line: Angus Wathen (personal)
 - [x] README copyright/author line filled
-- [ ] Trademark application filed, fee paid; not yet granted — no ™/®
-      claim asserted anywhere in the repo until it lands, then revisit
-      whether it's worth actually applying
+- [~] Trademark application filed and fee paid 2026-08-01, **pending
+      USPTO review — not yet granted.** No ™/® claim asserted anywhere in
+      the repo until it lands; revisit whether it's worth an active
+      claim once it does.
 - [x] README: donate link filled (Ko-fi live: ko-fi.com/anguswathen);
       `.github/FUNDING.yml` set so GitHub renders the native Sponsor button
 - [x] README/CONTRIBUTING: paid-consulting offer removed 2026-08-01 —
