@@ -20,8 +20,12 @@
       specifics — location, product name, and franchise/software linkage
       removed 2026-07-21; numbers approved for publication
 - [ ] Copyright registration prepared for v1.0 (with AI-assistance
-      disclosure per USCO guidance — attorney-shaped claim)
-- [ ] GitHub: Discussions enabled, issue template = feedback-packet
-      finding format, repo description + topics set
-- [ ] Release: version tagged, zip attached as the release asset (the
-      zip IS the installer — ADOPT.md at root)
+      disclosure per USCO guidance — attorney-shaped claim) — still
+      Angus's own step, not something an agent can prepare
+- [x] GitHub: Discussions enabled; issue template = feedback-packet
+      finding format (`.github/ISSUE_TEMPLATE/method-feedback.md` +
+      config.yml pointing general questions to Discussions); repo
+      description + 7 topics set — done 2026-08-01
+- [x] Release: v0.13 tagged, zip attached as the release asset (built via
+      `git archive`, ADOPT.md at root, verified) — done 2026-08-01:
+      https://github.com/angu113/positive-rate-method/releases/tag/v0.13
