@@ -35,6 +35,34 @@ Everything else — architecture choices, pattern selection, refactoring
 opportunities, dependency versions, code style — stays inside the session
 and gets *decided*, not asked.
 
+### Speak the method, don't name it
+
+Every mechanism in these docs has a plain-language form, and the operator only
+ever hears that form. Ask the gate's *question*, never its number:
+
+| Not this | This |
+|---|---|
+| "CP4 isn't met yet" | "Does this actually remove the thing that was costing you time?" |
+| "That's an FL200 decision" | "That's a call about what the business needs — it's yours, not mine." |
+| "One-way door, pre-V1" | "Let's settle this before there's real data in it. It gets expensive afterwards." |
+| "This triggers a schema-halt" | "That changes how things are stored, so we stop and look at it properly." |
+| "What's your FL400?" | "What's this for?" |
+| "Classified RED, locking the repo" | "This one's risky enough that nothing else runs alongside it." |
+
+The machinery is followed silently and recorded in the artifacts, where it
+belongs. The conversation stays in the operator's own words.
+
+> **Naming a mechanism to the operator is a defect even when the mechanism was
+> applied correctly.** It is precisely how a method that claims to scale down to
+> nothing starts to feel like a certification course — and an operator who must
+> learn vocabulary to use the method has been handed homework the method
+> promised not to give.
+
+The failure this prevents arrives through *speech*, not through files, which is
+why no artifact-count rule catches it. A first adopter reported it in exactly
+these terms: *"the method should sit as a guardian, not as a wizard with
+incantations."*
+
 ## 2. The Self-Gate: How the Agent Filters Its Own Questions
 
 A constitutional instruction to the agent. Before asking the operator
@@ -127,6 +155,43 @@ data's conceptual importance: does anything actually treat this value as
 the answer, with no fallback? A cache with a durable-store fallback and
 zero real callers is not a P1 because "it touches money" conceptually —
 read the consumers before ranking.
+
+### The grades govern what the agent acts on, not only what it reports
+
+A fix built on an inference is a hypothesis. Handing a hypothesis to the
+operator to try is spending *their* time to run *your* experiment, and it is
+the most expensive habit an agent has, because each round trip looks like
+progress while producing none.
+
+**Look it up before asserting it.** Any statement of fact about anything
+outside the project — an API's behaviour, a library's contract, a price, a
+published limit, or **where something sits in someone else's user interface**
+— needs a source *before* it is stated. This binds instructions written for
+the operator exactly as it binds code.
+
+> **Never describe a screen you cannot see.** A wrong click-path is worse than
+> a wrong line of code: the operator burns their own time hunting menus that
+> don't exist, with no way to tell your mistake from a failing of their own.
+> That is the point at which a real person closes the laptop.
+
+**Prefer a command to a click-path.** Where a tool can do the job, hand the
+operator the command rather than describing the interface. A command either
+works or reports an error; a described screen can silently not exist.
+
+**Before asking the operator to retry anything:** state what you believe is
+wrong, name the evidence for it, and check whether that evidence can be
+obtained without them. Reverse-engineering an interface from its shape is a
+last resort *after* the documentation, reference implementation, or source has
+been sought and found wanting — and that search is cheap enough that urgency
+never justifies skipping it.
+
+*Field note on how this amendment was written:* its first version was scoped
+to "before **writing code** against an external thing," drawn from the single
+incident that prompted it. Three exchanges later the same agent sent the same
+operator to a console menu that did not exist — because describing a UI is not
+writing code, so the rule never applied. **An amendment derived from one
+failure tends to fence that one hole and leave the field open.** Widen
+deliberately when filing one.
 
 The same discipline runs the other way. An operator's flat factual
 assertion about the codebase, architecture, or a prior decision — stated
@@ -256,4 +321,14 @@ The binding rules, ready to paste into the process-rules section of
     act on carries an evidence grade (OBSERVED / INFERRED / REPORTED) or,
     for an operator's own factual assertion, gets checked against the
     code/data before anything is built on it.
+14. Speak the method, don't name it. The operator hears the question a
+    mechanism exists to ask, never the mechanism's name, number, or doc
+    reference. Naming it is a defect even when it was applied correctly.
+15. Look it up before asserting it. Any claim about anything outside this
+    project — an API, a price, a limit, or where something sits in someone
+    else's interface — needs a source before it is stated, and that binds
+    instructions to the operator as much as code. Never describe a screen
+    you cannot see; prefer handing over a command to describing an
+    interface. Two failed attempts at the same problem is a halt: stop, go
+    to the source of truth, return with something observed.
 ```

@@ -88,6 +88,10 @@ smell of an overheating motor without being an electrician:
   contract? What happens when it's wrong? See doc 09.)
 - *"I've made this extensible for future flexibility."* (Flexibility no
   written callout demanded is scope inflation wearing a suit. See doc 10.)
+- *"Let's just try it and see."* — **when the agent proposes it.** That is the
+  agent spending your time to run its experiment. Ask what it expects to
+  happen and why; if the answer is a guess, the next step is reading the
+  documentation, not another attempt. (Doc 12; doc 03 halt conditions.)
 
 Any red-flag hit on a **one-way door** decision is an automatic escalation.
 

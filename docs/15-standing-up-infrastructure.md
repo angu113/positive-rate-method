@@ -57,6 +57,26 @@ Introduced day one at APRON (git exists from the first commit) and via
 autodiscovery for live-project adoption (doc 11) — same cadence as the cost
 ledger.
 
+## Silent Decision, Stated Outcome
+
+The self-gate keeps the tooling *decision* silent, and should — nobody needs to
+be consulted about `git init`. But it does not follow that the *outcome* stays
+silent too, and conflating the two is a real failure observed in adoption: an
+operator three sessions in asked for their work to be put into source control,
+having had it in a private remote with every change pushed since the first
+hour. The silence intended as *not bothering them* landed as *nobody has done
+this*.
+
+> **State it once, plainly, at the close of the first session:** *"Your work is
+> saved to {where} after every change — nothing here can be lost."* One
+> sentence. No technical detail, no decision requested, never repeated.
+
+Note the asymmetry this corrects. Doc 13 is careful that cost is surfaced in
+plain dollars precisely so the operator is not left anxious about the meter.
+Whether their work can be lost is a more visceral anxiety than what it costs,
+and it deserves the same one-line courtesy. **Silence about a decision is
+respectful; silence about whether their work is safe is neglect.**
+
 ## Security Verification — Mandatory, Not Optional
 
 An operator handed a runbook and told "click here, sign up there" cannot be

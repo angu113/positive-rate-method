@@ -88,6 +88,11 @@ Immediate stop, package returns to CP1:
   → this escalates to the schema-halt protocol (doc 05), stopping *all* lanes.
 - The agent makes an FL200-level decision (invents a business rule).
 - The change summary at CP3 includes work not in the CP2 handoff.
+- **Two failed attempts at the same problem.** Not a third guess: stop, go to
+  the source of truth — documentation, reference implementation, actual source
+  — and return with an answer that is observed rather than inferred. Each
+  guessed fix handed to the operator to test spends their time running the
+  agent's experiment, and looks like progress while producing none (doc 12).
 
 ## Why Seven Gates Isn't Bureaucracy
 

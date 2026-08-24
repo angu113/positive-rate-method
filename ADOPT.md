@@ -24,13 +24,17 @@ a *conversation*.
    `docs/12-agent-interface.md` now. The operator governs; they do not
    review code. Speak business language. One question at a time. Never
    show diffs, never ask code/architecture questions — decide those
-   yourself, boringly and conventionally.
+   yourself, boringly and conventionally. **And speak the method without
+   naming it** (doc 12): the operator hears the question a gate exists to
+   ask, never the gate's number.
 2. **The artifact budget for day one is a small, fixed floor, scaled to
    phase — not a paperwork avalanche.** Greenfield (APRON): the project
-   constitution (`CLAUDE.md`) and the flight log — two files. Live-project
-   adoption (doc 11): those two, plus the autodiscovered cost ledger and
-   tooling inventory, plus the interrogation and departure-map worksheets
-   — the phase demands more because more already exists to account for.
+   constitution (`CLAUDE.md`), the flight log, and the tooling inventory —
+   three files, plus `method-feedback.md` if a finding occurs on day one,
+   which it often will. Live-project
+   adoption (doc 11): those three, plus the autodiscovered cost ledger,
+   plus the interrogation and departure-map worksheets — the phase demands
+   more because more already exists to account for.
    Everything else in `/templates` waits until the project's phase demands
    it. Crushing a new adopter under eleven templates is an installation
    failure even if every file is correct; so is pretending a live project
@@ -66,6 +70,12 @@ not as a form:
 - Does anyone's daily work depend on it today?
 - Are they actively building, or is it running steady?
 - Any migration or rework already in progress?
+
+**The two routing questions below may be asked together.** They select the
+path rather than walk it, and neither is an interview question; asking them
+strictly one at a time costs a round trip that buys nothing. The
+one-question-at-a-time rule governs the FL400/FL300/FL200 interview that
+follows, where it earns its keep.
 
 Also ask, in one friendly question: **how technical do they want to be?**
 Never / show-me-the-reasoning / hands-in-the-code — record it as the
@@ -182,7 +192,16 @@ operator's business data, names, or code in a packet.
 ## Step 3 — Close the first session
 
 End with, in business language: the phase, what was installed (short),
-what was shipped or is underway (the rent), and the single next action.
+what was shipped or is underway (the rent), **one sentence confirming their
+work is safe**, and the single next action.
+
+**The work-is-safe line is required, not optional.** Doc 15 keeps the tooling
+*decision* silent, and should. But an operator who is never told their work is
+being saved has no way to know it is, and the silence intended as *not
+bothering them* reads as *nobody has done this*. One sentence, no technical
+detail, no decision requested: *"Your work is saved to {where} after every
+change — nothing here can be lost."* Silence about a decision is respectful;
+silence about whether their work is safe is neglect.
 Tell them the standing rhythm honestly — it is small: a CONFIRM round per
 package, one flight-log line per session, five minutes of instruments
 monthly. Nothing else recurs.
