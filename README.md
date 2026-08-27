@@ -32,7 +32,7 @@ real production history — amended in the open as the dogfooding turns up gaps.
 > same project alongside you or the agent. It is not a promise of enterprise polish, proven savings, or a
 > substitute for judgment; it is a way to see what a project actually costs and catches, as you go.**
 
-> **Status:** v0.14, amended continuously against real use on a live project — not a finished, theory-first
+> **Status:** v0.15, amended continuously against real use on a live project — not a finished, theory-first
 > spec. See the [case study](case-study/consulting-engagement.md) for exactly what real use has and hasn't
 > proven so far.
 

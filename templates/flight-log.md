@@ -13,7 +13,14 @@
 
 **"Caught this session" vocabulary** (use the shortest true one):
 `scope-inflation` · `vocab-mismatch` · `undeclared-touch` · `shape-change-flagged`
-· `above-altitude` · `estimate-miss` · `cost-surprise` · `none`
+· `above-altitude` · `estimate-miss` · `cost-surprise` · `falsified-hypothesis` · `none`
+
+`falsified-hypothesis` covers a result that surprised the agent without
+breaking anything — "we expected X, observed Y," corrected before it
+shipped. Not a catch of a mistake in progress and not an incident (that's
+`incident-log.md`'s job); just a wrong expectation, worth a line for the
+same reason a catch is: a pattern across several is data the method can
+act on, and it evaporates the moment it's silently corrected in-session.
 
 ## Monthly rollup (five minutes, with the tripwire/ledger scan)
 - Sessions this month: {n} · Halts: {n} · Catches: {n} ({top type})

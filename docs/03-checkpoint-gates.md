@@ -115,3 +115,16 @@ artifact can: it **measures** the compounding claim (median hours per
 feature, trending down) instead of asserting it, and it turns the gates'
 catch-rate into the method's own positive-rate evidence. Three catches of
 the same type in a month is an amendment, filed.
+
+**Update any ledger at the moment of the event it records, not at
+session-wrap.** Doc 13's cost ledger already states this for money
+("surface costs as they accrue, not as they surprise"); the same principle
+applies to every other artifact a project keeps as a running record —
+a deployment log, a per-shipment ledger, anything logging *what happened
+and when*. A session-wrap reconstruction from memory misses events and
+mis-orders them in a way a same-motion write never does. This doesn't
+change the flight log itself, which is deliberately one line per *session*
+by design (it summarizes gates and estimates, not individual events) — it
+governs any OTHER artifact a project layers on top that tracks discrete
+events, which should update in the same motion as the event, leaving
+session-wrap to reconcile drift rather than rebuild history from scratch.

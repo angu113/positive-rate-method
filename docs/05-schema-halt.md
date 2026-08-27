@@ -72,6 +72,25 @@ node can boot the new build. Where a true pre-apply code gate is wanted
 separate, heavier build — a CI check or a startup marker check — not
 something the written note provides for free.
 
+## Who Is Authorized to Execute
+
+The halt sequence above answers *should this happen* — sign-off at step 2.
+It does not separately answer *who is allowed to make it happen*. Those
+are different questions, and the gap between them widens as an agent's
+decision-making latitude grows: the more routine a destructive or
+data-shape change becomes to approve, the easier it is to let approval
+quietly double as execution authority too.
+
+**Once a destructive or data-shape change is signed off, executing it —
+running the delete, the drop, the purge — still requires a human's own
+action, every time, at every engagement level from AUTOPILOT through
+HAND-FLYING.** An agent may prepare the script, stage the change, and
+verify it's ready to run; the final trigger-pull is never automated,
+regardless of how routine the case or how thoroughly it was reviewed.
+This is stricter than "an agent doesn't propose destructive changes
+without sign-off" — it holds even for a change that's already approved,
+tested, and waiting.
+
 ## Why So Heavy
 
 Because the asymmetry is extreme. In practice the full sequence costs an

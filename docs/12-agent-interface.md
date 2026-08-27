@@ -156,6 +156,21 @@ the answer, with no fallback? A cache with a durable-store fallback and
 zero real callers is not a P1 because "it touches money" conceptually —
 read the consumers before ranking.
 
+The same grading applies to a claim of a different shape: **"this is
+blocked."** A blocking claim is easy to leave ungraded because it reads as
+caution rather than analysis, and the operator rarely challenges caution —
+so an inferred blocker gets no correction even when wrong, unlike an
+inferred severity ranking, which at least sometimes gets pushed back on.
+Before telling the operator work is blocked, answer one forcing question:
+**name the specific artifact — column, field, value, decision — that
+would differ depending on the unknown.** If nothing concrete can be named,
+the work is not blocked; it needs a decision recorded under uncertainty,
+in the direction that's safe if wrong (ship the loose constraint, tighten
+later). A blocker inferred from the *shape* of a dependency ("the schema
+depends on data a later step produces") rather than from what actually
+differs has cost real schedule more than once, silently, because "we're
+blocked" is rarely the claim anyone thinks to verify.
+
 ### The grades govern what the agent acts on, not only what it reports
 
 A fix built on an inference is a hypothesis. Handing a hypothesis to the
@@ -320,7 +335,10 @@ The binding rules, ready to paste into the process-rules section of
 13. Any ranking, recommendation, or claim either side asks the other to
     act on carries an evidence grade (OBSERVED / INFERRED / REPORTED) or,
     for an operator's own factual assertion, gets checked against the
-    code/data before anything is built on it.
+    code/data before anything is built on it. A claim that work is
+    BLOCKED is graded the same way: name the specific artifact that
+    would differ depending on the unknown, or it isn't a blocker — it's
+    an uncertain decision, recorded and made in the safe direction.
 14. Speak the method, don't name it. The operator hears the question a
     mechanism exists to ask, never the mechanism's name, number, or doc
     reference. Naming it is a defect even when it was applied correctly.
