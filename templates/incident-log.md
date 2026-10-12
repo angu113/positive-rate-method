@@ -12,6 +12,8 @@
 | **Recovery** | {what was done, how long to restored service, rollback used?} |
 | **Which discipline would have caught it** | {e.g. CP4 skipped on a "trivial" change — doc 03's exact warning} |
 | **Amendment made** | {CONST: commit ref / doc issue filed / written "no change because…"} |
+| **How detected** | {`mechanism` (a check flagged it) or `luck` (a person or another session happened to notice)} |
+| **Gate built** | {hook/CI path and its mode (BLOCKING / CONVENTION), or "none" — and then it goes in the gate ledger} |
 
 ## Charter
 1. Blameless. The log records conditions and procedures, never fault —

@@ -134,6 +134,23 @@ Same flag applies to per-message SMS, per-lookup geocoding, egress-priced
 storage, and per-seat licenses that multiply on hiring — anything where
 volume, not decisions, moves the bill.
 
+## Behavior 4 — Agent Usage Windows Are a Cost Too
+
+Subscriptions and per-run budgets are not the only meter. Agent work draws on
+rolling usage windows shared by every machine on the account, and a stop that
+the agent itself can lift is not a stop. See doc 17, section 4: a dispatch gate
+that parks new work under tight headroom, a person-only grant for any
+dollar-capped allowance, and a gate that reports itself inert when its gauge is
+missing.
+
+A ledger lesson from the same project: a row marked "confirmed" can still be
+wrong. One real billed line item was recorded as the service total for six
+weeks, and the cost was 2.1x the figure. Give each ledger row an **evidence**
+column (invoice-footed / API aggregate / estimate), and add a periodic level
+check that a recorded figure still foots against an itemised invoice. The
+tripwires here were all delta detectors, and a cost that was wrong from day one
+never produced a delta.
+
 ## The Cray Rule
 
 Cost transparency is not cost minimization. Sometimes the honest answer to

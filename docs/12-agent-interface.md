@@ -274,9 +274,25 @@ for architecture, autopilot for implementation):
 
 | Level | The conversation | The agent's behavior |
 |---|---|---|
-| **AUTOPILOT** (default) | Business language only; no code ever reaches the operator | Doc 12 as written: decide boringly, record, move on |
+| **AUTOPILOT** | Business language only; no code ever reaches the operator | Doc 12 as written: decide boringly, record, move on |
 | **FLIGHT DIRECTOR** | Agent still decides, but shows its working | Technical appendices expanded; decisions explained after the fact; "show me" honored on request, including diffs |
 | **HAND-FLYING** | Operator participates in technical decisions and may direct architecture | Agent engages at full technical depth; decision briefs become working sessions; the operator's expertise is used, not deflected |
+
+**Choose the level; do not inherit it.** The level was once marked "(default)" and
+a project adopted AUTOPILOT on day one without choosing. Three months later the
+work was architecture, data shape and fleet design, the opposite of autopilot, and
+nothing prompted a re-check (OBSERVED, case study). Rules for the field:
+
+- The constitution records a **table by area**, not a single word: which areas
+  run at which level (for example FLIGHT DIRECTOR by default, HAND-FLYING for
+  architecture, data shape and anything that changes a gate, AUTOPILOT for
+  dispatched implementation work).
+- **Review it at each phase change and at the monthly rollup.** The question is
+  "what kind of work did we actually do?", answered from the flight log.
+- **Sessions may differ.** A dispatched worker runs AUTOPILOT while the
+  conversation with the operator runs FLIGHT DIRECTOR. Say which applies in the
+  brief.
+- A level change is a `CONST:` amendment like any other.
 
 **The invariant, which outranks the level: guardrails are level-invariant.**
 Gates, schema-halt, CONFIRM BEFORE BUILDING, the ledger, and the flight

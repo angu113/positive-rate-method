@@ -1,5 +1,8 @@
 # FLIGHT LOG — {project name}
-<!-- One line per agent session. Blameless by charter (lineage: NASA ASRS —
+<!-- One row per unit of WORK (a work item or PR), not per session: with
+     parallel agents and a fleet, a session is not a unit (doc 17). Row cap:
+     about 600 characters. Detail goes in the PR or the change summary, and the
+     row links to it. Blameless by charter (lineage: NASA ASRS —
      near-misses are the cheapest safety data that exists). Two jobs:
      (1) calibrate estimates so the doc 13 marginal-cost claim is MEASURED,
      not asserted; (2) record what the gates caught — the method's own
@@ -23,7 +26,10 @@ same reason a catch is: a pattern across several is data the method can
 act on, and it evaporates the moment it's silently corrected in-session.
 
 ## Monthly rollup (five minutes, with the tripwire/ledger scan)
-- Sessions this month: {n} · Halts: {n} · Catches: {n} ({top type})
+- Rows this month: {n} · Halts: {n} · Catches: {n} ({top type})
+- Catches by type: {type: n, ...} <!-- COUNT them. Three of one type = an
+  amendment (charter 3), and nothing triggers that unless someone counts. -->
+- Engagement level still right? {from the kind of work in the rows} (doc 12)
 - Estimate accuracy: {median actual/estimate} — trending {tighter/looser}
 - Marginal cost of a feature this month: {median hours CP0→CP6}
   vs. three months ago: {hours} <!-- the compounding claim, measured -->
@@ -33,3 +39,12 @@ act on, and it evaporates the moment it's silently corrected in-session.
 2. A catch is a SUCCESS of the method, not an embarrassment. A month of
    `none` means either flawless handoffs or a log nobody is filling.
 3. Three catches of the same type = a doc or constitution amendment, filed.
+   The monthly rollup counts them, because nothing else will.
+4. Est. says a number and a reason, or says "not estimated" and why. A column
+   filled with "~1 session" or "not estimated" measures nothing, and the
+   doc 13 marginal-cost claim then rests on nothing.
+5. Keep the table together. Append rows directly under the header row, above
+   the rollup. Rows appended below the rollup are orphaned from the header.
+6. Measured on one project (152 rows): median row 2,028 characters, 39 over
+   3,000. A log nobody can scan is a log nobody reads, so the cap is part of
+   the charter, not a style note.

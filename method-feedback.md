@@ -12,7 +12,7 @@
 **Context header (include in every packet, anonymized):**
 Phase: N/A — finding raised against the methodology repo itself, not an
 adopting project · Engagement level: N/A · Project shape: the methodology
-repo dogfooding its own feedback loop · Method version: v0.14
+repo dogfooding its own feedback loop · Method version: v0.15 (v0.16 drafted on branch prm-realise-2026-10-12, not released)
 
 ## Findings
 | # | Doc/Template | What happened | Class | Proposed amendment (text or "—") |

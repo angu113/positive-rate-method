@@ -80,8 +80,11 @@ follows, where it earns its keep.
 Also ask, in one friendly question: **how technical do they want to be?**
 Never / show-me-the-reasoning / hands-in-the-code — record it as the
 Engagement Level (AUTOPILOT / FLIGHT DIRECTOR / HAND-FLYING, doc 12) in
-the constitution you create. Remind them the guardrails are identical at
-every level and the level changes anytime.
+the constitution you create, as a small table by area (conversation,
+architecture and data shape, dispatched implementation), not a single word.
+There is no default: ask. Remind them the guardrails are identical at every
+level, the level changes anytime, and you will re-check it at each phase
+change and at the monthly rollup.
 
 If nothing is built yet, also ask, in one friendly question: **is this for
 a business, or for yourself (personal/hobby)?** Record it — it decides
@@ -165,7 +168,9 @@ Read `docs/11-adopting-on-a-live-project.md`. Run it conversationally:
 | Tripwire register | First DEBT finding or first doc 07 record |
 | Gate checklist | First AMBER or money-touching package |
 | Lanes manifest | First parallel sessions |
-| Incident log | First post-V1 breakage (introduce it kindly; it's blameless) |
+| Incident log | Day one, empty. Its trigger is a one-line entry, not a new file: nobody starts a document mid-incident, and a log deferred to "the first breakage" was never started (doc 16). Introduce it kindly; it's blameless |
+| Gate ledger (doc 16) | Day one, with the constitution. Every rule gets a mode; most start as STATED GUIDANCE |
+| Constitution validator (`templates/validate_constitution.py`) | When the constitution is first committed; wire into CI and the session-start check |
 | Method feedback log | The first time THE METHOD ITSELF fights reality (unclear doc, missing template field, rule vs. good practice, gap you had to improvise across) |
 | Instrument panel (`INSTRUMENTS.html`) | After the first month OR first three shipped packages — generate per `templates/instrument-panel.md`; regenerate at session close and on "show me the instruments" |
 | Interrogation/departure worksheets | Live-project adoption only; you fill them |

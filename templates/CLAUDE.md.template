@@ -32,9 +32,27 @@
 - **Naming conventions:** {files, branches, commits}
 
 ## Operator Engagement Level (doc 12)
-**Level: {AUTOPILOT | FLIGHT DIRECTOR | HAND-FLYING}**{, scoped: e.g. hand-flying for architecture, autopilot for implementation}
-<!-- Changes only by CONST: amendment. Guardrails are level-invariant:
-     gates, halts, CONFIRM, ledger, and flight log apply at every level. -->
+| Area | Level (AUTOPILOT / FLIGHT DIRECTOR / HAND-FLYING) |
+|------|------|
+| {default for conversation with the operator} | {FLIGHT DIRECTOR} |
+| {architecture, data shape, anything that changes a gate} | {HAND-FLYING} |
+| {dispatched implementation work} | {AUTOPILOT} |
+<!-- Choose it; do not inherit it (doc 12). Review at each phase change and at
+     the monthly rollup, from the flight log. Changes only by CONST: amendment.
+     Guardrails are level-invariant: gates, halts, CONFIRM, ledger, and flight
+     log apply at every level. -->
+
+## Enforcement (doc 16)
+- Prefer a deterministic, externally-checkable gate over a prose reminder.
+  Where a rule can't be made mechanical, tie it to the most concrete,
+  frequent trigger available, not a cadence.
+- Every non-negotiable names its mode and its gate in the same line:
+  **BLOCKING** (hook/CI refuses) · **CONVENTION** (leaves a checkable trace) ·
+  **STATED GUIDANCE** (intent only; the default when unstated).
+- Promoting a rule is a logged `CONST:` decision citing an incident-log row.
+- This file has a size cap and a cited-path check in CI
+  (`templates/validate_constitution.py`). A rule that needs a paragraph
+  belongs in a doc it points to.
 
 ## Process Rules (binding on every session)
 1. You operate inside ONE worktree. Never read or write outside it.

@@ -160,6 +160,43 @@ empty until a second developer is actually onboarded — no fabricated timeline 
   already-documented option, with only the resulting business fact
   surfacing to the operator.
 
+## Three Months Later: What Running It Showed (added 2026-10-12)
+
+Written from the project's own logs, not a fresh review. Evidence grades are
+as in doc 12; everything below is one project, one operator.
+
+**Praise, with numbers.**
+- The gates that were mechanically enforced held. The adherence audit found
+  **0 of 20** audited constitution claims had drifted.
+- Cutting the constitution from **520 to about 90 lines**, with each rule
+  pointing at its gate and a CI size and path check on the file, was the
+  single most effective change of the period (doc 16).
+- Schema-halt and the cost ledger earned their keep (see the stories above),
+  and the ledger caught a 2.1x cost error once someone read the itemised
+  invoice.
+
+**Criticism, same standard.**
+- **The engagement level was wrong for months.** AUTOPILOT was declared on
+  adoption day as a default. The work was architecture and fleet design.
+  The operator said so; nothing in the method had asked (doc 12 now says
+  choose it and review it).
+- **Most rules left no trace.** 41 of 51 rules left no evidence when followed;
+  6 have been instrumented since. A rule without a gate was a wish (doc 16).
+- **Luck found most failures.** Of nine back-filled incidents, five ended in a
+  hook and four of those five were found by luck first. Four still have no
+  gate.
+- **The incident log was never started.** It was deferred to "the first
+  breakage", and many breakages later it did not exist until the 2026-10-12
+  back-fill.
+- **The flight log did not survive parallel agents.** 152 rows, median 2,028
+  characters, 39 over 3,000; estimates are mostly "not estimated"; five catch
+  types passed the three-catch amendment threshold unnoticed.
+- **Process overhead is real.** Around three months of mostly governance and
+  fleet engineering; the method's own cost claim (doc 13, marginal cost per
+  feature) has not been measured because the Est. column is empty.
+- **Still one operator.** No second adopter yet. This addition does not change
+  the "get a real non-author to install it" conclusion of the review below.
+
 ## What Failed / What We'd Do Differently
 
 ### The first data-platform choice (worked example for doc 07)

@@ -143,6 +143,8 @@ docs/
   13-cost-governance.md       The cost ledger, marginal estimates, runaway tripwires, the Cray rule
   14-lineage-and-battle-scars.md  Standing on shoulders; SDD positioning; the industry's disasters, read against the disciplines
   15-standing-up-infrastructure.md  The errand pattern, tooling runbooks, and mandatory security verification
+  16-gates-not-doctrine.md    Enforcement ladder, incident -> hook, gating the constitution itself (proposed v0.16)
+  17-running-agents-at-scale.md  Governor/Daily-work roles, authority boundary, usage-window gating (proposed v0.16)
 templates/
   CLAUDE.md.template          Starting constitution for a new project
   handoff-prompt.md           Work-package handoff skeleton
@@ -153,7 +155,9 @@ templates/
   departure-map.md            Live-project adoption, Phase 2 worksheet (doc 11)
   cost-ledger.md              Technical inventory with price tags (doc 13)
   flight-log.md               One line per session: estimates, actuals, catches (doc 03)
-  incident-log.md             Blameless postmortem-lite for post-V1 breakage (doc 14)
+  incident-log.md             Blameless postmortem-lite for post-V1 breakage; "how detected" and "gate built" columns (docs 14, 16)
+  gate-ledger.md              Every rule, its mode, its gate, the gap (doc 16)
+  validate_constitution.py    Stdlib CI check: size cap, cited paths resolve, mode tags (doc 16)
   method-feedback.md          Findings about the method itself; "package feedback" exports issues/PRs
   instrument-panel.md         Spec: the six-pack flight instruments as one offline HTML file
   tooling-runbook.md          Lay-person setup runbook for an infra errand, worked Git+GitHub example (doc 15)
